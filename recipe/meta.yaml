@@ -1,4 +1,4 @@
-{% set version = "2.0.0" %}
+{% set version = "3.0.0" %}
 
 package:
   name: starlette-csrf
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/s/starlette-csrf/starlette_csrf-{{ version }}.tar.gz
-  sha256: 5f03b8c496840d612f1f7065aac7a209da084972f6e7844bcc5752c32ac54747
+  sha256: 7afaca8c72cc3c726e5942778af53454607ca3e653fd86cd75ee35d8cd1cfa77
 
 build:
   noarch: python

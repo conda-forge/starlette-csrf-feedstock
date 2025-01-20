@@ -5,23 +5,23 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/s/starlette-csrf/starlette_csrf-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/s/starlette-csrf/starlette_csrf-{{ version }}.tar.gz
   sha256: 7afaca8c72cc3c726e5942778af53454607ca3e653fd86cd75ee35d8cd1cfa77
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
     - hatch-regex-commit
     - hatchling
     - pip
-    - python >=3.8
+    - python {{ python_min }}
   run:
     - itsdangerous >=2.0.1,<3.0.0
-    - python >=3.8
+    - python >={{ python_min }}
     - starlette >=0.14.2
 
 test:
@@ -40,6 +40,7 @@ test:
     - pip
     - pytest-asyncio
     - pytest-cov
+    - python {{ python_min }}
 
 about:
   home: https://github.com/frankie567/starlette-csrf

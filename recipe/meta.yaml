@@ -30,7 +30,7 @@ test:
     - tests
   requires:
     - asgi-lifespan
-    - httpx
+    - httpx <0.28
     - mypy
     - pip
     - pytest-asyncio
